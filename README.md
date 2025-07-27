@@ -12,13 +12,15 @@ A Java/Spring Boot application for exploring literary works through the Gutendex
 - Clean console-based interface
 
 ## 📸 Screenshots
-- **option 1 - Search book**
+*option 1 - Search book*
+
 ![Search book by title](./images/searchbook.png)  
 
-- **option 3 - Show authors**
+*option 3 - Show authors*
+
 ![Show authors](./images/showAuthors.png)  
 
-- **option 6 - Top 10 most downloaded books**
+*option 6 - Top 10 most downloaded books*
 ![Top 10 most downloaded books](./images/top10MostDownloadedBooks.png)  
 ## 🛠️ Tech Stack
 
