@@ -40,8 +40,8 @@ A Java/Spring Boot application for exploring literary works through the Gutendex
 
 ### Setup
 ```bash
-git clone https://github.com/yourusername/literalura-one.git
-cd literalura-one
+git clone https://github.com/luisasmatortega/literalura.git
+cd literalura
 ```
 ### Configuration
 Create `application.properties` in `src/main/resources` with:
