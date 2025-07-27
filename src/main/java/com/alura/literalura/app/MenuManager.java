@@ -33,6 +33,7 @@ public class MenuManager
             3- listar autores registrados
             4- listar autores vivos en un determinado año
             5- listar libros por idioma
+            6- Top 10 libros más descargados
             0- salir
             ----------------------------------------------
             
@@ -49,6 +50,7 @@ public class MenuManager
                     case 3 -> listAllAuthors();
                     case 4 -> searchAliveAuthorsByYear();
                     case 5 -> searchBooksByLanguage();
+                    case 6 -> showTop10Downloads();
                     case 0 -> System.out.println("Hasta pronto.");
                     default -> System.out.println("Opción inválida!");
                 }
@@ -154,6 +156,20 @@ public class MenuManager
             } else {
                 books.forEach(this::displayBookDetails);
             }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    private void showTop10Downloads() {
+        try {
+            List<AluraBook> books = bookService.getTop10DownloadedBooks();
+            System.out.println("\n=== TOP 10 LIBROS MAS DESCARRGADOS ===");
+            books.forEach(book -> System.out.printf(
+                    "- %s (%s downloads)\n",
+                    book.getTitle(),
+                    book.getNumberOfDownloads()
+            ));
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }

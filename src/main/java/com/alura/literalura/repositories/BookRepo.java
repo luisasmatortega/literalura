@@ -16,8 +16,10 @@ public interface BookRepo extends JpaRepository<AluraBook, Long>
 {
     List<AluraBook> findBooksByLanguage(String language);
 
-
-    @EntityGraph(attributePaths = {"author"}) // Fetches author eagerly in this query only
+    @EntityGraph(attributePaths = {"author"})
     @Query("SELECT b FROM AluraBook b WHERE LOWER(b.title) LIKE LOWER(concat('%', :title,'%'))")
     List<AluraBook> findByTitleContainingIgnoreCase(@Param("title") String title);
+
+    @Query("SELECT b FROM AluraBook b ORDER BY b.numberOfDownloads DESC LIMIT 10")
+    List<AluraBook> findTop10ByOrderByNumberOfDownloadsDesc();
 }

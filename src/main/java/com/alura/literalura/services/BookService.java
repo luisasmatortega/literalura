@@ -71,7 +71,7 @@ public class BookService
 
     @Transactional
     public List<AluraBook> findBooksByTitle(String title) {
-        return bookRepo.findByTitleContainingIgnoreCase(title.trim()); // Assuming you have this method in your repository
+        return bookRepo.findByTitleContainingIgnoreCase(title.trim());
     }
 
     private AluraBook mapToAluraBook(GutendexApiResponse.Book apiBook) {
@@ -100,6 +100,11 @@ public class BookService
     public List<AluraBook> getBooksByLanguage(String languageCode) {
 
         return bookRepo.findBooksByLanguage(languageCode.toLowerCase());
+    }
+
+    @Transactional(readOnly = true)
+    public List<AluraBook> getTop10DownloadedBooks() {
+        return bookRepo.findTop10ByOrderByNumberOfDownloadsDesc();
     }
 
 
