@@ -12,14 +12,14 @@ A Java/Spring Boot application for exploring literary works through the Gutendex
 - Clean console-based interface
 
 ## 📸 Screenshots
-![Search book by title](./images/searchbook.png)  
 *option 1 - Search book*
+![Search book by title](./images/searchbook.png)  
 
-![Show authors](./images/showAuthors.png)  
 *option 3 - Show authors*
+![Show authors](./images/showAuthors.png)  
 
-![Top 10 most downloaded books](./images/top10MostDownloadedBooks.png)  
 *option 6 - Top 10 most downloaded books*
+![Top 10 most downloaded books](./images/top10MostDownloadedBooks.png)  
 ## 🛠️ Tech Stack
 
 - **Java 21** - Core application language
